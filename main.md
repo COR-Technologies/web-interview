@@ -34,6 +34,8 @@
 ### 2.1. Основные сущности (Возможно изменится)
 
 #### **LoyaltyCard (Карта лояльности)**
+
+```typescript
 interface LoyaltyCard {
   id: string; // UUID
   user: {
@@ -61,7 +63,11 @@ interface LoyaltyCard {
   created_at: string;
   updated_at: string;
 }
+```
+
 #### **LoyaltyTransaction (Транзакция)**
+
+```typescript
 interface LoyaltyTransaction {
   id: string; // UUID
   loyalty_card: {
@@ -80,7 +86,11 @@ interface LoyaltyTransaction {
   };
   created_at: string;
 }
-#### **LoyaltyCardHistory (История изменений)**escript
+```
+
+#### **LoyaltyCardHistory (История изменений)**
+
+```typescript
 interface LoyaltyCardHistory {
   id: string;
   loyalty_card: {
@@ -98,7 +108,11 @@ interface LoyaltyCardHistory {
   };
   created_at: string;
 }
+```
+
 #### **PartnerFarCardsIntegration (Настройки FarCards)**
+
+```typescript
 interface FarCardsSettings {
   id: string;
   partner_id: string;
@@ -114,6 +128,7 @@ interface FarCardsSettings {
   created_at: string;
   updated_at: string;
 }
+```
 
 ---
 
@@ -130,7 +145,6 @@ interface FarCardsSettings {
 #### Защита маршрутов
 - Проверка токена при загрузке приложения
 - Автоматический редирект на логин при истечении токена
-- 
 - Middleware для проверки прав доступа к разделам
 
 ---
